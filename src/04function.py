@@ -81,4 +81,23 @@ def add_end(L=None):
 print add_end()
 print add_end(['GAME'])
 
+#可变参数
+def calc(*numbers):
+    sum=0
+    for n in numbers:
+        sum = sum + n*n
+    return sum
+print calc(1,2,3)
+nums=[1,2,3]
+print calc(*nums)
+
+#关键字参数
+def person(name,age,**kw):
+    print 'name:',name,'age:',age,'other:',kw
+    
+person('zhoulong', 28)
+person('zhoulong', 28, city='wuhan')
+
+kw={'city':'wuhan','job':'engineer'}
+person('zhoulong', 28,**kw)
 
